@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewBag.Title = "SignUp";
+}
+
+<hr />
+<br />
+<div class="row">
+    <h1>SIGN UP</h1>
+</div>
+<br />
+
+<!-- Text input-->
+<div class="row">
+    <div class="form-group">
+        <label class="col-md-1 control-label" for="name">Name</label>
+        <div class="col-md-4">
+            <input autofocus="" class="form-control input-md" id="name" name="Name" placeholder="Kanwal Mubashar" required="" type="text" value="" />
+
+        </div>
+    </div>
+</div>
+<br />
+<div class="row">
+    <!-- Text input-->
+    <div class="form-group">
+        <label class="col-md-1 control-label" for="email">Email</label>
+        <div class="col-md-4">
+            <input class="form-control input-md" id="email" name="email" placeholder="kanwal@gmail.com" required="" type="email" value="" />
+            <span class="field-validation-valid" data-valmsg-for="email" data-valmsg-replace="true"></span>
+        </div>
+
+    </div>
+</div>
+<br />
+<div class="row">
+    <!-- Password input-->
+    <div class="form-group">
+        <label class="col-md-1 control-label" for="password">Password</label>
+        <div class="col-md-4">
+            <input class="form-control input-md" id="password" name="password" placeholder="Password" required="" type="password" value="" />
+            <span class="field-validation-valid" data-valmsg-for="password" data-valmsg-replace="true"></span>
+        </div>
+    </div>
+</div>
+<br />
+<div class="row">
+    <!-- Password input-->
+    <div class="form-group">
+        <label class="col-md-1 control-label" for="confirmPassword">Confirm Password</label>
+        <div class="col-md-4">
+            <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm Password" class="form-control input-md" required="">
+            <span id="error_confirmPassword" class="field-validation-error"></span>
+        </div>
+    </div>
+</div>
+<br />
+<div class="row">
+    <!-- Button (Double) -->
+    <div class="form-group">
+        <label class="col-md-1 control-label" for="signup"></label>
+        <div class="col-md-8">
+            <input type="submit" id="signup" name="signup" class="btn btn-success" value="Sign Up" />
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<hr />
+<div class="row">
+    <link href="/Content/js-image-slider.css" rel="stylesheet" type="text/css" />
+    <div id="foobar">
+        <footer>
+            <ul>
+                <li>&copy; <b>@DateTime.Now.Year - ShopIn </b></li>
+                <li style=" font-size: 15px ; font-weight:bold"> @Html.ActionLink("Refund & Exchange", "RefundAndExchange", "Home")</li>
+                <li style=" font-size: 15px ; font-weight:bold"> @Html.ActionLink("ShippingInfo", "ShippingInfo", "Home")</li>
+                <li style=" font-size: 15px ; font-weight:bold"> @Html.ActionLink("Privacy Policy", "ContactUs", "Home")</li>
+                <li style=" font-size: 15px ; font-weight:bold"> @Html.ActionLink("About", "About", "Home")</li>
+            </ul>
+        </footer>
+    </div>
+</div>
