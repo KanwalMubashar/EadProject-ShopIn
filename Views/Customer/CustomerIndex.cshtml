@@ -1,0 +1,44 @@
+﻿@{
+    Layout = "~/Views/Shared/_CustomerLayout.cshtml";
+    ViewBag.Title = "CustomerIndex";
+}
+<div class="row">
+    <h1 align="center">CUSTOMER INDEX</h1>
+    <hr />
+</div>
+<div class="row">
+    <div class="container">
+        <h3>Welcome <u>Customer Name</u></h3>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-lg-2">
+        <ul class="list-group categories">
+            <li class="list-group-item active " style=" font-size: 15px ; font-weight:bold "></li>
+            <li class="list-group-item" style=" font-size: 15px ; font-weight:bold">@Html.ActionLink("Cart", "Women", "Home")</li>
+            <li class="list-group-item" style=" font-size: 15px ; font-weight:bold">@Html.ActionLink("Orders", "Men", "Home")</li>
+            <li class="list-group-item" style=" font-size: 15px ; font-weight:bold">@Html.ActionLink("My Account", "Men", "Home")</li>
+        </ul>
+    </div>
+</div>
+    <br />
+    <br />
+    <br />
+    <hr />
+    <div class="row">
+        <link href="/Content/js-image-slider.css" rel="stylesheet" type="text/css" />
+        <div id="foobar">
+            <footer>
+                <ul>
+                    <li>&copy; <b>@DateTime.Now.Year - ShopIn </b></li>
+                    <li style=" font-size: 15px ; font-weight:bold"> @Html.ActionLink("Refund & Exchange", "RefundAndExchange", "Home")</li>
+                    <li style=" font-size: 15px ; font-weight:bold"> @Html.ActionLink("ShippingInfo", "ShippingInfo", "Home")</li>
+                    <li style=" font-size: 15px ; font-weight:bold"> @Html.ActionLink("Privacy Policy", "ContactUs", "Home")</li>
+                    <li style=" font-size: 15px ; font-weight:bold"> @Html.ActionLink("About", "About", "Home")</li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+
+

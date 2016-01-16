@@ -1,45 +1,66 @@
 ﻿
 @{
     ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<hr />
-<div class="row">
-    <h1>LOGIN</h1>
-</div>
-<br />
-<br />
-<br />
-<br />
-<div class="row">
-    <!-- Text input-->
-    <div class="form-group">
-        <label class="col-md-1 control-label" for="email">Email</label>
-        <div class="col-md-4">
-            <input class="form-control input-md" id="email" name="email" placeholder="kanwal@gmail.com" required="" type="email" value="" />
-            <span class="field-validation-valid" data-valmsg-for="email" data-valmsg-replace="true"></span>
-        </div>
+@model EadProject.ViewModel.CustomerAdminViewModel
 
-    </div>
+<div class="row">
+    <h1 align="centerb">LOGIN</h1>
+    <hr />
 </div>
 <br />
+
 <div class="row">
-    <!-- Password input-->
-    <div class="form-group">
-        <label class="col-md-1 control-label" for="password">Password</label>
-        <div class="col-md-4">
-            <input class="form-control input-md" id="password" name="password" placeholder="Password" required="" type="password" value="" />
-            <span class="field-validation-valid" data-valmsg-for="password" data-valmsg-replace="true"></span>
+    <div class="col-lg-6">
+        <h1 style="color:green">Customer</h1>
+        <br />
+        @using (Html.BeginForm("CustomerIndex","Customer",FormMethod.Post))
+        {
+        <div class="form-horizontal">
+            <div class="form-group">
+             
+                 @Html.LabelFor(a => a.C.CustomerName)
+                 @Html.TextBoxFor(x => x.C.CustomerName, new { @class = "form-control input-lg", })
+               
+            </div>
+
+            <div class="form-group">
+                @Html.Label("Password", new { @class = " control-label" })
+                @Html.TextBox("StudentFirstName", null, new { @class = "form-control " })
+            </div>
+
+            
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success"><b>Sign In</b></button>
+                    </div>
+             
         </div>
+        }
     </div>
-</div>
-<br />
-<div class="row">
-    <!-- Button (Double) -->
-    <div class="form-group">
-        <label class="col-md-1 control-label" for="Login"></label>
-        <div class="col-md-8">
-            <input type="submit" id="signup" name="Login" class="btn btn-success" value="Login" />
-        </div>
+    <div class="col-lg-6">
+        <h1 style="color:green">Admin</h1>
+        <br />
+        @using (Html.BeginForm("AdminIndex", "Admin", FormMethod.Post))
+        {
+            <div class="form-horizontal">
+                <div class="form-group">
+
+                    @Html.LabelFor(a => a.A.Name)
+                    @Html.TextBoxFor(x => x.A.Name, new { @class = "form-control input-lg", })
+
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Password", new { @class = " control-label" })
+                    @Html.TextBox("StudentFirstName", null, new { @class = "form-control " })
+                </div>
+
+                <div class="form-group">
+                        <button type="submit" class="btn btn-success" ><b>Sign In</b></button>
+                </div>
+            </div>
+        }
     </div>
 </div>
 <br />
@@ -60,6 +81,8 @@
         </footer>
     </div>
 </div>
+
+
 
 
 
